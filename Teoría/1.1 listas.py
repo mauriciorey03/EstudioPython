@@ -51,3 +51,4 @@ print(lst1)
 print(lst.count("Mauricio"))#CUENTA LA CANTIDAD DE VECES QUE APARECE UN ELEMENTO
 
 print(lst.index("Mauricio"))#DEVUELVE LA PRIMERA POSICIÓN DONDE APARECE EL EMENTO
+

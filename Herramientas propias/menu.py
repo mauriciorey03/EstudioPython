@@ -3,21 +3,19 @@ def menu():
         try:
             print("\n\n*** TITULO ***")
             print("\tMENU")
-            print("1- Agregar empleado\n\
-2- Modificar empleado\n\
-3- Buscar empleado\n\
-4- Eliminar empleado\n\
-5- Listar empleados\n\
-6- Listar nómina de un empleado\n\
-7- Listar nómina de todos los empleados\n\
-8- Salir\n")
-            op = int(input("\t>> Escoja una opción (1-8): "))
-            if op < 1 or op > 8:
-                print("Error. Opción Inválida (de 1 a 8).")
+            print("1- Agregar usuario\n\
+2- Modificar usuario\n\
+3- Buscar usuario\n\
+4- Eliminar usuario\n\
+5- Listar usuarios\n\
+6- Salir\n")
+            op = int(input("\t>> Escoja una opción (1-6): "))
+            if op < 1 or op > 6:
+                print("Error. Opción Inválida (de 1 a 6).")
                 continue
             return op
         except ValueError:
-            print("Error. Opción Inválida (de 1 a 8).")
+            print("Error. Opción Inválida (de 1 a 6).")
             continue
         
 def main():
@@ -34,7 +32,7 @@ def main():
             print("Seleccionó: 3")
             # función -> buscarEmpleado(lstEmpl)
         # colocar otras opciones
-        elif op == 8:
+        elif op == 6:
             print("\n", "Gracias por usar el programa... Adios...".center(80))
             break
     

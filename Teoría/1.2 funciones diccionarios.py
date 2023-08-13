@@ -8,3 +8,11 @@ print(dicCat.get(2, "No existe esta llave"))
 del dicCat["2"]
 print(dicCat.get("2", "No existe esta llave"))
 print(dicCat.get(2, "No existe esta llave"))
+
+miDiccionario={'manzana':430, 'bananas':312, 'peras':217}
+
+print(miDiccionario.values())
+
+print(miDiccionario.keys())
+
+print(miDiccionario.items())

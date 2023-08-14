@@ -25,46 +25,20 @@ def evaluacion(a,b,c):
         evalua="Reprueba"
     return evalua, resultado
 
-def leerNumero(msg):
-    while True:
-        try:
-            n = int(input(msg))
-            if n < 1:
-                msgError("Error. Número mayor que 0")
-                continue
-            return n
-        except ValueError:
-            msgError("Error. Número inválido")
-            continue
 
-def leerNom(msg):
-    while True:
-        try:
-            n = input(msg)
-            if n == None or n.strip() == "":
-                print("Error Nombre inválido.")
-                continue
-            return n
-        except Exception as e:
-            print("Ha sucedido un Error: ", e)
-            continue
 
-def msgError(msg):
-    print(msg)
-    input("Presione cualquier tecla para continuar ...")
-
-cant = int(input("Cantidad de estudiantes"))
 doc = {}
-
+num=0
 while True:
-        print("\nDatos del estudiante #",)
-        id =leerNumero( "Código del estudiante: ")
+        num+=1
+        print("\nDatos del estudiante #",num)
+        id =int(input("Código del estudiante: "))
         if id == 999:
             break
-        nom = leerNom("Nombre? ")
-        Nota1 = leerNumero("Ingrese la primera nota: ")
-        Nota2 = leerNumero("Ingrese la segunda nota: ")
-        Nota3 = leerNumero("Ingrese la tercera nota: ")
+        nom = input("Nombre? ")
+        Nota1 = int(input("Ingrese la primera nota: "))
+        Nota2 = int(input("Ingrese la segunda nota: "))
+        Nota3 = int(input("Ingrese la tercera nota: "))
         aprueba, definitiva = evaluacion(Nota1,Nota2,Nota3)
         Resultado=aprueba
 

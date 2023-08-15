@@ -1,0 +1,14 @@
+{
+    "clientes": [
+        {
+            "consecutivo": 1,
+            "numCuenta": "9638528",
+            "saldo": 57000000
+        },
+        {
+            "consecutivo": 2,
+            "numCuenta": "789456",
+            "saldo": 45000000
+        }
+    ]
+}

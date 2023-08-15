@@ -5,6 +5,12 @@
             "last_name": "Rivers",
             "age": 36,
             "amount": 1.11
+        },
+        {
+            "first_name": "Mauricio",
+            "last_name": "Rivers",
+            "age": 27,
+            "amount": 3.11
         }
     ]
 }

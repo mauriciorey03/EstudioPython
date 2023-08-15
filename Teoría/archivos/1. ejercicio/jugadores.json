@@ -1,0 +1,17 @@
+{
+    "1": {
+        "nombre": "roy",
+        "edad": 46,
+        "peso": 70
+    },
+    "2": {
+        "nombre": "mauricio",
+        "edad": 27,
+        "peso": 70
+    },
+    "3": {
+        "nombre": "paola",
+        "edad": 18,
+        "peso": 45
+    }
+}

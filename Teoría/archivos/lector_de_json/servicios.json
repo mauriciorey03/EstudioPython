@@ -1,0 +1,18 @@
+{
+    "usuarios": [
+        {
+            "full_name": "rh",
+            "email": "correo@gmail.com",
+            "id_number": 36,
+            "total_packagers_per_user":2,
+            "total_price": 1.11
+        },
+        {
+            "full_name": "Mauricio",
+            "email": "correo@gmail.com",
+            "id_number": 27,
+            "total_packagers_per_user":2,
+            "total_price": 3.11
+        }
+    ]
+}

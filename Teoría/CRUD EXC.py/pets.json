@@ -1,18 +1,51 @@
 {
     "pets": [
         {
-            "tipo": "perroooooo",
-            "raza": "peroooo",
-            "talla": "perrooo",
-            "precio": 5599,
-            "servicios": "aseo"
+            "tipo": "Gato",
+            "raza": "Persa",
+            "talla": "mediano",
+            "precio": 100000,
+            "servicios": [
+                "vacunas",
+                "ba\u00c3\u00b1o",
+                "alimento",
+                "juguetes"
+            ]
         },
         {
-            "tipo": "GATOOOOO",
-            "raza": "GATOOOO",
-            "talla": "GATOOOO",
-            "precio": 4099,
-            "servicios": "ASDF"
+            "tipo": "Perro",
+            "raza": "Pastor Alem\u00c3\u00a1n",
+            "talla": "Grande",
+            "precio": 20000,
+            "servicios": [
+                "hotel"
+            ]
+        },
+        {
+            "tipo": "Perro",
+            "raza": "Pastor Collins",
+            "talla": "Grande",
+            "precio": 15000,
+            "servicios": [
+                "ba\u00c3\u00b1o"
+            ]
+        },
+        {
+            "tipo": "Chanchito",
+            "raza": "Tiny Rose",
+            "talla": "peque\u00c3\u00b1o",
+            "precio": 40000,
+            "servicios": [
+                "vacunas",
+                "alimento"
+            ]
+        },
+        {
+            "tipo": "Fluffy",
+            "raza": "Corgi",
+            "talla": "peluche",
+            "precio": 500000,
+            "servicios": "consentida"
         }
     ]
 }

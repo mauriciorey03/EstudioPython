@@ -31,9 +31,13 @@ def leerMascotas():
         data = json.load(mascotas)
     return data
 
+def escribirMascotas(escribir):
+    with open('pets.json','w') as archivo:
+        json.dump(escribir,archivo,indent=4)    
+    print("Creando archivo...")
+
 def mostrarMascotas():
-    with open('pets.json','r') as mascotas:
-        data = json.load(mascotas)
+    data = leerMascotas()
     for num in data['pets']:
         print(num,'tipo: ', num['tipo'])
         print('raza: ', num['raza'])
@@ -64,64 +68,73 @@ def crearMascotas():
             
             masco['pets'].append({ "tipo" : tipo, "raza" : raza, "talla" : talla, "precio":precio, "servicios":servicios})
         
-        with open('pets.json','w') as archivo:
-            json.dump(masco,archivo,indent=4)    
-    print("Creando archivo...")
+        escribirMascotas(masco)
     return
 
 
 def buscarMascota():
-    with open('pets.json','r') as mascotas:
-        data = json.load(mascotas)
-        num=int(input("Ingrese el número de la mascota"))
-        if num != None:
-            print(data['pets'][num]['tipo'])
-        else:
-            print("\nLa mascota no figura en la lista")
-        input("Presione cualquier tecla para continuar ...")
+    data=leerMascotas()
+    num=int(input("Ingrese el número de la mascota"))
+    if num != None:
+        print(data['pets'][num]['tipo'])
+    else:
+        print("\nLa mascota no figura en la lista")
+    input("Presione cualquier tecla para continuar ...")
 
 def actualizarMascota():
-    with open('pets.json','r') as mascotas:
-        data = json.load(mascotas)
-        num=int(input("Ingrese el número de la mascota"))
-        if num != None:
-            print("Va a modificar la información de: ", data['pets'][num]['tipo'])
-            print("Cual valor desea modificar:\n\
-                \t1.Tipo\n\
-                \t2.Raza\n\
-                \t3.Talla\n\
-                \t4.Precio\n\
-                \t5.Servicio\n\
-                o presione cualquier tecla para cancelar")
-            newMod=int(input("Seleccione una opc: "))
-            if newMod==1:
-                tipo=input("Ingrese el nuevo tipo: ")
-                data['pets'][num]['tipo']=tipo
-                print("Se modificó el tipo: ", tipo)
-            elif newMod==2:
-                raza = input("Ingrese la nueva raza: ")
-                data['pets'][num]['raza']=raza
-                print("Se modificó la raza: ", raza)
-            elif newMod==3:
-                talla = input("Ingrese la nueva talla: ")
-                data['pets'][num]['talla']=talla
-                print("Se modificó la talla: ", talla)
-            elif newMod==4:
-                precio = int(input("Ingrese el nuevo precio: "))
-                data['pets'][num]['precio']=precio
-                print("Se modificó el precio: ", precio)
-            elif newMod==5:
-                servicios = input("Ingrese el servicios: ")
-                data['pets'][num]['precio']=precio
-                print("Se modificó el precio: ", precio)
-            else:
-                print("Se cancelo la modificación.")
+    data=leerMascotas()
+    num=int(input("Ingrese el número de la mascota"))
+    if num != None:
+        print("Va a modificar la información de: ", data['pets'][num]['tipo'])
+        print("Cual valor desea modificar:\n\
+            \t1.Tipo\n\
+            \t2.Raza\n\
+            \t3.Talla\n\
+            \t4.Precio\n\
+            \t5.Servicio\n\
+            o presione cualquier tecla para cancelar")
+        newMod=int(input("Seleccione una opc: "))
+        if newMod==1:
+            tipo=input("Ingrese el nuevo tipo: ")
+            data['pets'][num]['tipo']=tipo
+            print("Se modificó el tipo: ", tipo)
+        elif newMod==2:
+            raza = input("Ingrese la nueva raza: ")
+            data['pets'][num]['raza']=raza
+            print("Se modificó la raza: ", raza)
+        elif newMod==3:
+            talla = input("Ingrese la nueva talla: ")
+            data['pets'][num]['talla']=talla
+            print("Se modificó la talla: ", talla)
+        elif newMod==4:
+            precio = int(input("Ingrese el nuevo precio: "))
+            data['pets'][num]['precio']=precio
+            print("Se modificó el precio: ", precio)
+        elif newMod==5:
+            servicios = input("Ingrese el servicios: ")
+            data['pets'][num]['precio']=precio
+            print("Se modificó el precio: ", precio)
         else:
-            print("\nLa mascota no figura en la lista")
-        input("Presione cualquier tecla para continuar ...")
+            print("Se cancelo la modificación.")
+        escribirMascotas(data)
+    else:
+        print("\nLa mascota no figura en la lista")
+    input("Presione cualquier tecla para continuar ...")
 
 def eliminarMascota():
-    pass
+    data=leerMascotas()
+    num=int(input("Ingrese el número de la mascota"))
+    if num != None:
+        print("\nNombre:", data['pets'][num]['tipo'])
+    si=input("Está seguro que desea eliminarlo? (si para confirmar)")
+    if si=="si" or si=="SI" or si=="Si":
+        del data['pets'][num]
+        print("La mascota se eliminó satisfactoriamente.")
+    else:
+        print("\nLa mascota no figura en la lista")
+    input("Presione cualquier tecla para continuar ...")
+
+
 
 def main():
     while True:

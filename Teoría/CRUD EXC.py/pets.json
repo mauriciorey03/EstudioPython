@@ -46,6 +46,20 @@
             "talla": "peluche",
             "precio": 500000,
             "servicios": "consentida"
+        },
+        {
+            "tipo": "gato",
+            "raza": "gato",
+            "talla": "peque\u00f1o",
+            "precio": 5000,
+            "servicios": "acicalada"
+        },
+        {
+            "tipo": "cocodrilo",
+            "raza": "de la uis",
+            "talla": "peque",
+            "precio": 40000,
+            "servicios": "veterinaria"
         }
     ]
 }

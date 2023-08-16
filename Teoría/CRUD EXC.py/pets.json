@@ -1,0 +1,18 @@
+{
+    "pets": [
+        {
+            "tipo": "perroooooo",
+            "raza": "peroooo",
+            "talla": "perrooo",
+            "precio": 5599,
+            "servicios": "aseo"
+        },
+        {
+            "tipo": "GATOOOOO",
+            "raza": "GATOOOO",
+            "talla": "GATOOOO",
+            "precio": 4099,
+            "servicios": "ASDF"
+        }
+    ]
+}

@@ -42,20 +42,6 @@
         },
         {
             "tipo": "gato",
-            "raza": "ario",
-            "talla": "peque",
-            "precio": 7000,
-            "servicios": "acicalada"
-        },
-        {
-            "tipo": "gato",
-            "raza": "amarillo",
-            "talla": "pequeño",
-            "precio": 5000,
-            "servicios": "veterinaria"
-        },
-        {
-            "tipo": "gato",
             "raza": "calle",
             "talla": "peque",
             "precio": 5000,
@@ -63,6 +49,15 @@
                 "veterinaria",
                 "consentida",
                 "lavado"
+            ]
+        },
+        {
+            "tipo": "gato",
+            "raza": "gato",
+            "talla": "gato",
+            "precio": 65000,
+            "servicios": [
+                "aseo"
             ]
         }
     ]

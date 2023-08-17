@@ -40,11 +40,18 @@ def escribirMascotas(escribir):
 def mostrarMascotas():
     data = leerMascotas()
     contador=0
-    print("# -- tipo -- raza -- precio -- servicios")
+    print("{:^5} | {:^10} | {:^15} | {:^10} | {:^15}".format("#","TIPO","RAZA","PRECIO","SERVICIOS"))
     for num in data['pets']:
         contador += 1
-        print(contador, num['tipo'],num['raza'],num['talla'],num['servicios'])
+        print("{:^5} | {:^10} | {:^15} | {:^10} | {:^15}".format(f"{contador}", f"{num['tipo']}",f"{num['raza']}",f"{num['talla']}",f"{','.join(num['servicios'])}"))
     return None
+
+
+# for i,k in std.items():
+#     #print(f"{k['Artículo']:^10} | {k['Valor unitario']:^15} | {k['Valor total']:^15}")
+#     print("{:^10} | {:^15} | {:^15}".format(f"{k['Artículo']}",f"{k['Valor unitario']:,.0f}",f"{k['Valor total']:,.0f}"))
+    
+# print("VALOR FINAL $ {:,.0f}".format(valorTotal))
 
 #2. Crear Nueva mascota con la posibilidad de múltiples ítems de Servicio
 def crearMascotas():
@@ -85,7 +92,9 @@ def buscarMascota():
     num=int(input("Ingrese el número de la lista principal, de la mascota que desea buscar: "))
     if num != None:
         print("El animal es un: ",data['pets'][num]['tipo'])
-        print(data['pets'][num]['raza'],data['pets'][num]['precio'],data['pets'][num]['servicios'])
+        print("Raza:",data['pets'][num]['raza'])
+        print("Precio: ${:,.0f}".format(data['pets'][num]['precio']))
+        print("Servicio: ",data['pets'][num]['servicios'])
     else:
         print("\nLa mascota no figura en la lista")
     input("Presione cualquier tecla para continuar ...")
@@ -132,15 +141,17 @@ def eliminarMascota():
     print()
     data=leerMascotas()
     num=int(input("Ingrese el número de la mascota "))
+    num-=1
     if num != None:
         print("\nNombre:", data['pets'][num]['tipo'])
     si=input("Está seguro que desea eliminarlo? ([S]i - [N]o)"  )
-    if si.lower()=="Si":
+    if si.lower()=="s":
         del data['pets'][num]
+        escribirMascotas(data)
         print("La mascota se eliminó satisfactoriamente.")
+        print()
     else:
-        print("\nLa mascota no figura en la lista")
-    input("Presione cualquier tecla para continuar ...")
+        input("Presione cualquier tecla para continuar ...")
 
 
 

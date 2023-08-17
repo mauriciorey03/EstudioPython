@@ -7,14 +7,14 @@
             "precio": 100000,
             "servicios": [
                 "vacunas",
-                "ba\u00c3\u00b1o",
+                "baño",
                 "alimento",
                 "juguetes"
             ]
         },
         {
             "tipo": "Perro",
-            "raza": "Pastor Alem\u00c3\u00a1n",
+            "raza": "Pastor Alemán",
             "talla": "Grande",
             "precio": 20000,
             "servicios": [
@@ -27,13 +27,13 @@
             "talla": "Grande",
             "precio": 15000,
             "servicios": [
-                "ba\u00c3\u00b1o"
+                "baño"
             ]
         },
         {
             "tipo": "Chanchito",
             "raza": "Tiny Rose",
-            "talla": "peque\u00c3\u00b1o",
+            "talla": "pequeño",
             "precio": 40000,
             "servicios": [
                 "vacunas",
@@ -41,25 +41,29 @@
             ]
         },
         {
-            "tipo": "Fluffy",
-            "raza": "Corgi",
-            "talla": "peluche",
-            "precio": 500000,
-            "servicios": "consentida"
-        },
-        {
             "tipo": "gato",
-            "raza": "gato",
-            "talla": "peque\u00f1o",
-            "precio": 5000,
+            "raza": "ario",
+            "talla": "peque",
+            "precio": 7000,
             "servicios": "acicalada"
         },
         {
-            "tipo": "cocodrilo",
-            "raza": "de la uis",
-            "talla": "peque",
-            "precio": 40000,
+            "tipo": "gato",
+            "raza": "amarillo",
+            "talla": "pequeño",
+            "precio": 5000,
             "servicios": "veterinaria"
+        },
+        {
+            "tipo": "gato",
+            "raza": "calle",
+            "talla": "peque",
+            "precio": 5000,
+            "servicios": [
+                "veterinaria",
+                "consentida",
+                "lavado"
+            ]
         }
     ]
 }

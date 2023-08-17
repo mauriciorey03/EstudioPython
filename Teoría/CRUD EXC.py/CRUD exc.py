@@ -12,11 +12,11 @@ def menu():
         try:
             print("\n\n*** EL CRUD DE MASCOTAS ***")
             print("1- Mostrar todas las mascotas\n\
-2- Crear nueva mascota\n\
-3- Mostrar los datos de Mascotas\n\
-4- Actualizar los datos de una mascota\n\
-5- Eliminar una mascota de la tienda\n\
-6- Salir\n")
+                2- Crear nueva mascota\n\
+                3- Mostrar los datos de Mascotas\n\
+                4- Actualizar los datos de una mascota\n\
+                5- Eliminar una mascota de la tienda\n\
+                6- Salir\n")
             op = int(input("\t>> Escoja una opción (1-6): "))
             if op < 1 or op > 6:
                 print("Error. Opción Inválida (de 1 a 6).")
@@ -133,7 +133,6 @@ def eliminarMascota():
     else:
         print("\nLa mascota no figura en la lista")
     input("Presione cualquier tecla para continuar ...")
-
 
 
 def main():

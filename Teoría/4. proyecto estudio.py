@@ -1,12 +1,26 @@
 import sys
-clients = ['pablo','ricardo']
+clients = [
+    {
+        'name':'Mauricio',
+        'company':'Apple',
+        'email':'email@apple.com',
+        'position':'S.E.'
+    },
+    {
+        'name':'Edgar',
+        'company':'Google',
+        'email':'email@google.com',
+        'position':'D.E.'
+    },
+]
 
 
-def create_client(client_name): #crea el cliente
+
+def create_client(client): #crea el cliente
     global clients #global permite extender el alcance
 
-    if client_name not in clients: #si... el nombre no está en la lista
-        clients.append(client_name) #agrega el nombre
+    if client not in clients: #si... el nombre no está en la lista
+        clients.append(client) #agrega el nombre
     else:
         print('The client is alredy in the list.') #si ya está, print este mensaje
 

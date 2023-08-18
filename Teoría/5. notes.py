@@ -1,0 +1,8 @@
+print("str","->",dir(str))
+print("int","->",dir(int))
+print("float","->",dir(float))
+print("bool","->",dir(bool))
+print("list","->",dir(list))
+print("dict","->",dir(dict))
+print("set","->",dir(set))
+print("tuple","->",dir(tuple))

@@ -12,8 +12,10 @@ def create_client(client_name): #crea el cliente
 
 
 def list_clients(): #Función que muestra la lista de clientes
+    #print(tabulate(table, headers=["#","Cliente"]))
     for indice, client in enumerate(clients):# esta FUNCIÓN permite ciclar y enumerar el índice ÚTIL pendiente ver más documentación
         print('{}: {}'.format(indice, client)) #client es una var autonóma, propia para esta función
+        #print(tabulate(indice,client,headers="firstrow"))
 
 
 def update_client(client_name, updated_name): # modifica el cliente, con el segundo parametro update_client

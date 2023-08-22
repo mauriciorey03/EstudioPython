@@ -1,24 +1,25 @@
 import sys
-clients = [
-    {
-        'name':'Mauricio',
-        'company':'Apple',
-        'email':'email@apple.com',
-        'position':'S.E.'
-    },
-    {
-        'name':'Edgar',
-        'company':'Google',
-        'email':'email@google.com',
-        'position':'D.E.'
-    },
-    {
-        'name':'Nubia',
-        'company':'Amazon',
-        'email':'email@amazon.com',
-        'position':'Gerente regional'
-    },
-]
+import csv
+import os
+CLIENTS_TABLE = '.clients.csv'
+CLIENTS_SCHEMA = ['nombre','company','email','position']
+clients = []
+
+
+def initialize_clients_from_storage():
+    with open(CLIENTS_TABLE, mode='r') as f:
+        reader = csv.DictReader(f, fieldnames=[CLIENTS_SCHEMA])
+        for row in reader:
+            clients.append(row)
+
+def save_clients_to_storage():
+    tmp_table_name = '{}.tmp'.format(CLIENTS_TABLE)
+    with open(tmp_table_name, mode='w') as f:
+        writer= csv.DictWriter(f, fieldnames=CLIENTS_SCHEMA)
+        writer.writerows(clients)
+
+        os.remove(CLIENTS_TABLE)
+    os.rename(tmp_table_name, CLIENTS_TABLE)
 
 
 
@@ -127,6 +128,7 @@ def get_client_name(): #pregunta por el nombre del cliente, hasta que lo ingrese
 
 
 if __name__ == '__main__':
+    initialize_clients_from_storage()
     print_welcome()
 
     comando = input().upper()
@@ -157,3 +159,6 @@ if __name__ == '__main__':
             print("The client: {} isn't in our client's list".format(client_name)) #El format es reemplazado por el client_name
     else:
         print('Comando inválido.')
+
+
+save_clients_to_storage()

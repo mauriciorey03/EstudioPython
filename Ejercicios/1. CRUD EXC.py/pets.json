@@ -50,15 +50,6 @@
                 "consentida",
                 "lavado"
             ]
-        },
-        {
-            "tipo": "gato",
-            "raza": "gato",
-            "talla": "gato",
-            "precio": 65000,
-            "servicios": [
-                "aseo"
-            ]
         }
     ]
 }

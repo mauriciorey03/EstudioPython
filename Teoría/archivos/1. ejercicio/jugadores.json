@@ -13,5 +13,10 @@
         "nombre": "paola",
         "edad": 18,
         "peso": 45
+    },
+    "4": {
+        "nombre": "nicolas",
+        "edad": 24,
+        "peso": 70
     }
 }

@@ -1,6 +1,6 @@
 import json
 import os
-os.system("clear")
+os.system("cls")
 
 def leerDatos():
     with open('ciudades.json', encoding="utf-8") as data:
@@ -10,18 +10,17 @@ def leerDatos():
 
 
 ruta=leerDatos()
-print(ruta[0]['Ciudades'][0]['nomCiudad'])
+#print(ruta[0]['Ciudades'][0]['nomCiudad'])
 
 def leerCiudades():
-    contador = 0
     for i in ruta:
         for x in i['Ciudades']:
-            contador+=1
-            print(contador,x['nomCiudad'])
+            print(x['nomCiudad'])
 
 def leerDepartamentos():
     for i in ruta:
-        print(i['nomDepartamento'])
+        listDept=i['nomDepartamento']
+    return listDept
 
 def elimCiudad():
     elim = input("Cuál ciudad desea eliminar")
@@ -39,8 +38,40 @@ def elimDepartamentos():
             ruta.remove(i)
             print("SE ELIMINÓ")#i['Ciudades'].remove(x)
             break
+        else:
+            print("El departamento no existe")
     leerDepartamentos()
 
+def adicionarCiudad():
+    addCiud = input("a cuál Departamento desea agregarle la ciudad? ")
+    while addCiud.title() not in 
+        if addCiud.title() in i['nomDepartamento']:
+            n=i['idDep']
+    idCiudad = int(input('Ingrese un código: '))
+    verificador = asigCodigo()
+    while idCiudad in verificador:
+        idCiudad = int(input('El código ya está, ingrese un nuevo código: '))
+    nombreCiudad = input('Ingrese el nombre de la ciudad: ')
+    image = nombreCiudad.lower()
+    ciudad = {
+        'idCiudad':idCiudad,
+        'nomCiudad':nombreCiudad.title(),
+        'imagen':(image+".jpg"),
+        'Coordenadas':{'lat':4,"lon":72}
+        }
+    ruta[n]['Ciudades'].append(ciudad)
+
+
+# TODO:CREAR UN DEPARTAMENTO
+# ADICIONAR UNA CIUDAD A UN
+def asigCodigo():
+    codigos=[]
+    for i in ruta:
+        for n in i['Ciudades']:
+            codigos.append(n['idCiudad'])
+    return codigos
+
+adicionarCiudad()
 print(ruta)
 # {
 # 	"Departamentos":
@@ -50,22 +81,3 @@ print(ruta)
 # ]}]}
 
 
-
-# def agregarAuto():
-#     auto = {
-#         "marca":"Chevrolet",
-#         "linea": "Monza",
-#         "modelo": "2000",
-#         "precio": "9000"
-#     }
-#     n=int(input("Cuántos elementos ?"))
-#     if (n==0):
-#         auto["equipamiento"] = "Sin Equipamiento "
-#     else:
-#         if (n==1):
-#             equipamiento=input("Ingrese el equipo: ")
-#         else:
-#             equipamiento=[]
-#             for i in range (n):
-#                 equipamiento.add(input("Ingrese el equipo: "))
-#     auto["equipamiento"]=equipamiento          

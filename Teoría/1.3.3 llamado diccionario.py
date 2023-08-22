@@ -13,3 +13,6 @@ car =	{
     "brand": "Ford","model": "Mustang","year": 1964
 }
 car.pop("model") #ELIMINAR
+
+nuevo=car['year'].add(20)
+print(nuevo)

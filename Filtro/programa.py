@@ -109,7 +109,7 @@ def eliminarTemas():
     return
 
 
-def Texto():
+def Texto ():
     data = leerManuales()
     contador=0
     print("========* LISTADO *========")
@@ -117,12 +117,13 @@ def Texto():
     for lenguaje,libros in data['manuales'].items():
         for temas in libros['temas']:
             contador+=1
-            print("Manual ",f"{lenguaje}:, {temas} ")
+            print("Manual ",f"{lenguaje}: ")
+            print
     print()
     return
 
 def listarManuales():
-    data = Texto()
+    data = leerManuales()
     contador=0
     print("========* LISTADO *========")
     print()
